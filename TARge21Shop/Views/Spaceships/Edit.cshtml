@@ -1,0 +1,97 @@
+﻿@model TARge21Shop.Models.Spaceship.SpaceshipEditViewModel
+
+@if (Model.Id.HasValue)
+{
+	<h1>Update</h1>
+}
+else
+{
+	<h1>Add</h1>	
+}
+
+
+
+<div>
+	<form method="post" enctype="multipart/form-data">
+		<input asp-for="Id"	type="hidden" />
+		<input asp-for="CreatedAt"	type="hidden" />
+		<input asp-for="ModifiedAt"	type="hidden" />
+
+		<div class="form-group row">
+			
+
+			<label asp-for="Name" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Name" class="form-control" />
+			</div>
+
+			<label asp-for="Type" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Type" class="form-control" />
+			</div>
+
+			<label asp-for="Crew" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Crew" class="form-control" />
+			</div>
+
+			<label asp-for="Passengers" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Passengers" class="form-control" />
+			</div>
+
+			<label asp-for="CargoWeight" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="CargoWeight" class="form-control" />
+			</div>
+
+			<label asp-for="FullTripsCount" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="FullTripsCount" class="form-control" />
+			</div>
+
+			<label asp-for="MaintenanceCount" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="MaintenanceCount" class="form-control" />
+			</div>
+
+			<label asp-for="LastMaintenance" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="LastMaintenance" class="form-control" />
+			</div>
+
+			<label asp-for="EnginePower" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="EnginePower" class="form-control" />
+			</div>
+
+			<label asp-for="MaidenLaunch" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="MaidenLaunch" class="form-control" />
+			</div>
+
+			<label asp-for="BuiltDate" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="BuiltDate" class="form-control" />
+			</div>
+		</div>
+
+		<hr />
+
+		@if (Model.Id.HasValue)
+		{
+			<input asp-action="Update" asp-controller="spaceships" type="submit" class=" btn btn-primary " value="Update" />
+		}
+		else
+		{
+			<input asp-action="add" asp-controller="spaceships" type="submit" class=" btn btn-primary " value="Add" />
+		}
+		
+		<a asp-action="edit" asp-controller="spaceship" class="btn btn-primary">Edit</a>
+
+		<a asp-action="index" class="btn btn-primary">Index</a>
+
+		<a asp-action="delete" class="btn btn-primary">Delete</a>
+
+	</form>
+</div>

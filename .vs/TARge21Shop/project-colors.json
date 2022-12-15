@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "76a318f9-719c-419d-aca0-884ae2a3face": {
+      "ProjectGuid": "76a318f9-719c-419d-aca0-884ae2a3face",
+      "DisplayName": "TARge21Shop",
+      "ColorIndex": 0
+    },
+    "f4cd1c03-1c6b-44eb-b5fe-bb4dca6b460b": {
+      "ProjectGuid": "f4cd1c03-1c6b-44eb-b5fe-bb4dca6b460b",
+      "DisplayName": "Class1",
+      "ColorIndex": 1
+    },
+    "cb97a6f4-206f-489a-9bc9-415981f5c930": {
+      "ProjectGuid": "cb97a6f4-206f-489a-9bc9-415981f5c930",
+      "DisplayName": "TARge21Shop.Core",
+      "ColorIndex": 2
+    },
+    "2ca561de-69aa-4048-a80b-123bf439b995": {
+      "ProjectGuid": "2ca561de-69aa-4048-a80b-123bf439b995",
+      "DisplayName": "TARge21Shop.Data",
+      "ColorIndex": 3
+    },
+    "32d94065-24b3-4cc2-a037-cf1a8596337e": {
+      "ProjectGuid": "32d94065-24b3-4cc2-a037-cf1a8596337e",
+      "DisplayName": "TARge21Shop.ApplicationService",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}
