@@ -78,6 +78,13 @@ else
 
 		<hr />
 
+		@foreach (var images in Model.Image)
+		{
+			<partial name="_Images" model="images" />
+		}
+
+		<hr />
+
 		@if (Model.Id.HasValue)
 		{
 			<input asp-action="Update" asp-controller="spaceships" type="submit" class=" btn btn-primary " value="Update" />
