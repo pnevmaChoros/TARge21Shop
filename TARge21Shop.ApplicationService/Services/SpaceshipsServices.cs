@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TARge21Shop.Data;
+﻿using TARge21Shop.Data;
 using TARge21Shop.Core.Dto;
 using TARge21Shop.Core.Domain.Spaceship;
 using TARge21Shop.Core.ServiceInterface;
@@ -24,7 +19,7 @@ namespace TARge21Shop.ApplicationService.Services
         }
 
 
-        public async Task<Spaceship> Add(SpaceshipDto dto)
+        public async Task<Spaceship> Create(SpaceshipDto dto)
         {
             var domain = new Spaceship()
             {
@@ -74,13 +69,13 @@ namespace TARge21Shop.ApplicationService.Services
             return domain;
         }
 
-        public async Task<Spaceship> GetUpdate(Guid id)
-        {
-            var result = await _context.Spaceships
-                .FirstOrDefaultAsync(x => x.Id == id);
+        //public async Task<Spaceship> Update(Guid id)
+        //{
+        //    var result = await _context.Spaceships
+        //        .FirstOrDefaultAsync(x => x.Id == id);
 
-            return result;
-        }
+        //    return result;
+        //}
 
         public async Task<Spaceship> Delete(Guid id)
         {

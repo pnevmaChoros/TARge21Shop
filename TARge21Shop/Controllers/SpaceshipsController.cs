@@ -40,16 +40,16 @@ namespace TARge21Shop.Controllers
 
         
         [HttpGet]
-        public IActionResult Add()
+        public IActionResult Create()
         {
-            SpaceshipEditViewModel spaceship = new SpaceshipEditViewModel();
+            SpaceshipCreateUpdateModel spaceship = new SpaceshipCreateUpdateModel();
 
-            return View("Edit", spaceship);
+            return View("CreateUpdate", spaceship);
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Add(SpaceshipEditViewModel vm)
+        public async Task<IActionResult> Create(SpaceshipCreateUpdateModel vm)
         {
             var dto = new SpaceshipDto()
             {
@@ -68,7 +68,7 @@ namespace TARge21Shop.Controllers
                 ModifiedAt = vm.ModifiedAt
             };
 
-            var result = await _spaceshipsSevices.Add(dto);
+            var result = await _spaceshipsSevices.Create(dto);
 
             if(result == null)
             {
@@ -80,16 +80,16 @@ namespace TARge21Shop.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Edit(Guid id)
+        public async Task<IActionResult> Update(Guid id)
         {
-            var spaceship = await _spaceshipsSevices.GetUpdate(id);
+            var spaceship = await _spaceshipsSevices.GetAsync(id);
 
             if(spaceship == null)
             {
                 return NotFound();
             }
 
-            var vm = new SpaceshipEditViewModel()
+            var vm = new SpaceshipCreateUpdateModel()
             {
                 Id = spaceship.Id,
                 Name = spaceship.Name,
@@ -106,12 +106,12 @@ namespace TARge21Shop.Controllers
                 ModifiedAt = spaceship.ModifiedAt
             };
 
-            return View(vm);
+            return View("CreateUpdate", vm);
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Update(SpaceshipEditViewModel vm)
+        public async Task<IActionResult> Update(SpaceshipCreateUpdateModel vm)
         {
             var dto = new SpaceshipDto()
             {
