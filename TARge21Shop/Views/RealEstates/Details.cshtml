@@ -1,0 +1,106 @@
+﻿@model TARge21Shop.Models.RealEstate.RealEstateDetailsViewModel
+
+<h1>Detail</h1>
+
+<div>
+	<h4>RealEstate</h4>
+	<hr />
+
+	<dl class="row">
+		<div class="form-group row">
+			<label asp-for="Id" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Id)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Address" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Address)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="City" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.City)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Region" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Region)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="PostalCode" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.PostalCode)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Country" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Country)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Phone" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Phone)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Fax" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Fax)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Size" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Size)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Floor" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Floor)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="Price" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.Price)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="RoomCounter" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.RoomCounter)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="CreatedAt" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.CreatedAt)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="ModifiedAt" class="col-sm-2 col-form-label" ></label>
+
+			@Html.DisplayFor(model => model.ModifiedAt)
+		</div>
+
+
+		@foreach (var images in Model.FileToApiViewModels)
+		{
+			<partial name="_images" model="images" />
+			@*<input asp-action="removeImage" asp-controller="realEstate" asp-route-ImageId="@images.ImageId" type="submit" />*@
+		}
+
+
+	</dl>
+	<a asp-action="index" asp-controller="realEstates" class="btn btn-success">Back</a>
+</div>
+
+

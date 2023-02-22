@@ -10,12 +10,12 @@ namespace TARge21Shop.ApplicationService.Services
     public class SpaceshipsServices : ISpaceshipsSevices
     {
         private readonly TARge21ShopContext _context;
-        private readonly IFileServices _files;
+        private readonly IFilesServices _files;
 
         public SpaceshipsServices
             (
                 TARge21ShopContext context,
-                IFileServices files
+                IFilesServices files
             )
         {
             _context = context;
@@ -70,7 +70,14 @@ namespace TARge21Shop.ApplicationService.Services
                 BuiltDate = dto.BuiltDate,
                 CreatedAt = dto.CreatedAt,
                 ModifiedAt = DateTime.Now,
+                //Files = dto.Files,
+                //Images = dto.Images
             };
+
+            if (dto.Files != null)
+            {
+                _files.UploadFileToDatabase(dto, domain);
+            }
 
             _context.Spaceships.Update(domain);
             await _context.SaveChangesAsync();
@@ -91,6 +98,17 @@ namespace TARge21Shop.ApplicationService.Services
             var spaceshipId = await _context.Spaceships
                 .FirstOrDefaultAsync(x =>x.Id == id);
 
+            var images = await _context.FileToDatabases
+                .Where(x => x.SpaceshipId == id)
+                .Select(y => new FileToDatabaseDto
+                {
+                    Id = y.Id,
+                    ImageTitle = y.ImageTitle,
+                    SpaceshipId = y.SpaceshipId,
+                })
+                .ToArrayAsync();
+
+            await _files.RemoveImageFromDatabase(images);
             _context.Spaceships.Remove(spaceshipId);
             await _context.SaveChangesAsync();
 
@@ -103,7 +121,6 @@ namespace TARge21Shop.ApplicationService.Services
 
             return result;
         }
-
     }
 }
 

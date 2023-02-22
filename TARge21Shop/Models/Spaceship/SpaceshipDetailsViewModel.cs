@@ -18,6 +18,12 @@
         public DateTime BuiltDate { get; set; }
 
 
+        //public List<IFormFile> Files { get; set; }
+        //public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
+
+        public List<ImageViewModel> Image { get; set; } = new List<ImageViewModel>();
+
+
         // only in database
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }

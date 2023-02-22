@@ -5,7 +5,7 @@ namespace TARge21Shop.Core.Dto
 {
     public class SpaceshipDto
     {
-        [Key]
+        //[Key]
         public Guid? Id { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }

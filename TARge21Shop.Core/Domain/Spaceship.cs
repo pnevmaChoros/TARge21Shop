@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+//using TARge21Shop.Models.Spaceship.ImageViewModel;
+using Microsoft.AspNetCore.Http;
 
 namespace TARge21Shop.Core.Domain.Spaceship
 {
