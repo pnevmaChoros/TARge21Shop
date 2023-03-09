@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TARge21Shop.props" />
+</Project>

@@ -30,9 +30,6 @@ namespace TARge21Shop.ApplicationService.Services
                 dto.MobileLink = weatherInfo.Headline.MobileLink;
                 dto.Link = weatherInfo.Headline.Link;
 
-                //dto.DailyForecastsDay = weatherInfo.DailyForecasts[0].EffectiveDate;
-                //dto.DailyForecastsEpochDate = weatherInfo.DailyForecasts[0].EffectiveEpochDate;
-
                 dto.TempMinValue = weatherInfo.DailyForecasts[0].Temperature.Minimum.Value;
                 dto.TempMinUnit = weatherInfo.DailyForecasts[0].Temperature.Minimum.Unit;
                 dto.TempMinUnitType = weatherInfo.DailyForecasts[0].Temperature.Minimum.UnitType;

@@ -3,103 +3,149 @@
 <h1>Result</h1>
 
 <div class="container">
-	<div class="form-group col-md-3">
-		<h2>Forecast for the selected city</h2>
 
-		<label asp-for="Date"></label>
-		<span class="badge">@Model.Date</span>
-		<br />
+	<h2>Forecast for the selected city</h2>
 
-		<label asp-for="EpochDate"></label>
-		<span class="badge">@Model.EpochDate</span>
-		<br />
+	<hr />
 
-		<label asp-for="Serverity"></label>
-		<span class="badge">@Model.Serverity</span>
-		<br />
+	<dl class="row">
+		<div class="form-group row">
+			<label asp-for="Date" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="Text"></label>
-		<span class="badge">@Model.Text</span>
-		<br />
+			@Html.DisplayFor(model => model.Date)
+		</div>
 
-		<label asp-for="MobileLink"></label>
-		<span class="badge">@Model.MobileLink</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="EpochDate" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="Link"></label>
-		<span class="badge">@Model.Link</span>
-		<br />
-		
-		<label asp-for="Category"></label>
-		<span class="badge">@Model.Category</span>
-		<br />
+			@Html.DisplayFor(model => model.EpochDate)
+		</div>
 
-		<label asp-for="Temperature.Minimum.Value"></label>
-		<span class="badge">@Model.Temperature.Minimum.Value</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="Serverity" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="Temperature.Minimum.Unit"></label>
-		<span class="badge">@Model.Temperature.Minimum.Unit</span>
-		<br />
+			@Html.DisplayFor(model => model.Serverity)
+		</div>
 
-		<label asp-for="Temperature.Minimum.UnitType"></label>
-		<span class="badge">@Model.Temperature.Minimum.UnitType</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="Text" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="Temperature.Maximum.Value"></label>
-		<span class="badge">@Model.Temperature.Maximum</span>
-		<br />
-		
-		<label asp-for="Temperature.Maximum.Unit"></label>
-		<span class="badge">@Model.Temperature.Maximum.Unit</span>
-		<br />
+			@Html.DisplayFor(model => model.Text)
+		</div>
 
-		<label asp-for="Temperature.Maximum.UnitType"></label>
-		<span class="badge">@Model.Temperature.Maximum.UnitType</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="MobileLink" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="DayCycle.Icon"></label>
-		<span class="badge">@Model.DayCycle.Icon</span>
-		<br />
+			@Html.DisplayFor(model => model.MobileLink)
+		</div>
 
-		<label asp-for="DayCycle.IconPhrase"></label>
-		<span class="badge">@Model.DayCycle.IconPhrase</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="Link" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="DayCycle.HasPrecipitation"></label>
-		<span class="badge">@Model.DayCycle.HasPrecipitation</span>
-		<br />
+			@Html.DisplayFor(model => model.Link)
+		</div>
 
-		<label asp-for="DayCycle.PrecipitationType"></label>
-		<span class="badge">@Model.DayCycle.PrecipitationType</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="Category" class="col-sm-2 col-form-label"></label>
 
-		
-		<label asp-for="DayCycle.PrecipitationIntensity"></label>
-		<span class="badge">@Model.DayCycle.PrecipitationIntensity</span>
-		<br />
+			@Html.DisplayFor(model => model.Category)
+		</div>
 
-		
-		<label asp-for="NightCycle.Icon"></label>
-		<span class="badge">@Model.NightCycle.Icon</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="TempMinValue" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="NightCycle.IconPhrase"></label>
-		<span class="badge">@Model.NightCycle.IconPhrase</span>
-		<br />
+			@Html.DisplayFor(model => model.TempMinValue)
+		</div>
 
-		<label asp-for="NightCycle.HasPrecipitation"></label>
-		<span class="badge">@Model.NightCycle.HasPrecipitation</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="TempMinUnit" class="col-sm-2 col-form-label"></label>
 
-		<label asp-for="NightCycle.PrecipitationType"></label>
-		<span class="badge">@Model.NightCycle.PrecipitationType</span>
-		<br />
+			@Html.DisplayFor(model => model.TempMinUnit)
+		</div>
 
-		
-		<label asp-for="NightCycle.PrecipitationIntensity"></label>
-		<span class="badge">@Model.NightCycle.PrecipitationIntensity</span>
-		<br />
+		<div class="form-group row">
+			<label asp-for="TempMinUnitType" class="col-sm-2 col-form-label"></label>
 
-	</div>
+			@Html.DisplayFor(model => model.TempMinUnitType)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="TempMaxValue" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.TempMaxValue)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="TempMaxUnit" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.TempMaxUnit)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="TempMaxUnitType" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.TempMaxUnitType)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="DayIcon" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.DayIcon)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="DayIconPhrase" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.DayIconPhrase)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="DayHasPercipitation" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.DayHasPercipitation)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="DayPrecipitationType" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.DayPrecipitationType)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="DayPrecipitationIntensity" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.DayPrecipitationIntensity)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="NightIcon" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.NightIcon)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="NightIconPhrase" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.NightIconPhrase)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="NightHasPercipitation" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.NightHasPercipitation)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="NightPrecipitationType" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.NightPrecipitationType)
+		</div>
+
+		<div class="form-group row">
+			<label asp-for="NightPrecipitationIntensity" class="col-sm-2 col-form-label"></label>
+
+			@Html.DisplayFor(model => model.NightPrecipitationIntensity)
+		</div>
+	</dl>
+
 </div>

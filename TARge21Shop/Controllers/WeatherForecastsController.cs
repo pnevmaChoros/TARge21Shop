@@ -29,14 +29,14 @@ namespace TARge21Shop.Controllers
 
 
         [HttpPost]
-        public IActionResult ShowWeather(WeatherViewModel vm)
+        public IActionResult ShowWeather()
         {
             if (ModelState.IsValid)
             {
                 return RedirectToAction("City", "WeatherForecasts");
             }
 
-            return View(vm);
+            return View();
         }
 
 
@@ -56,25 +56,24 @@ namespace TARge21Shop.Controllers
             vm.Link = dto.Link;
             vm.Category = dto.Category;
 
-            vm.Temperature.Minimum.Value = dto.TempMinValue;
-            vm.Temperature.Minimum.Unit = dto.TempMinUnit;
-            vm.Temperature.Minimum.UnitType = dto.TempMinUnitType;
+            vm.TempMinValue = dto.TempMinValue;
+            vm.TempMinUnit = dto.TempMinUnit;
+            vm.TempMinUnitType = dto.TempMinUnitType;
+            vm.TempMaxValue = dto.TempMaxValue;
+            vm.TempMaxUnit = dto.TempMaxUnit;
+            vm.TempMaxUnitType = dto.TempMaxUnitType;
 
-            vm.Temperature.Maximum.Value = dto.TempMaxValue;
-            vm.Temperature.Maximum.Unit = dto.TempMaxUnit;
-            vm.Temperature.Maximum.UnitType = dto.TempMaxUnitType;
+            vm.DayIcon = dto.DayIcon;
+            vm.DayIconPhrase = dto.DayIconPhrase;
+            vm.DayHasPercipitation = dto.DayHasPercipitation;
+            vm.DayPrecipitationType = dto.DayPrecipitationType;
+            vm.DayPrecipitationIntensity = dto.DayPrecipitationIntensity;
 
-            vm.DayCycle.Icon = dto.DayIcon;
-            vm.DayCycle.IconPhrase = dto.DayIconPhrase;
-            vm.DayCycle.HasPrecipitation = dto.DayHasPercipitation;
-            vm.DayCycle.PrecipitationType = dto.DayPrecipitationType;
-            vm.DayCycle.PrecipitationIntensity = dto.DayPrecipitationIntensity;
-
-            vm.NightCycle.Icon = dto.NightIcon;
-            vm.NightCycle.IconPhrase = dto.NightIconPhrase;
-            vm.NightCycle.HasPrecipitation = dto.NightHasPercipitation;
-            vm.NightCycle.PrecipitationType = dto.NightPrecipitationType;
-            vm.NightCycle.PrecipitationIntensity = dto.NightPrecipitationIntensity;
+            vm.NightIcon = dto.NightIcon;
+            vm.NightIconPhrase = dto.NightIconPhrase;
+            vm.NightHasPercipitation = dto.NightHasPercipitation;
+            vm.NightPrecipitationType = dto.NightPrecipitationType;
+            vm.NightPrecipitationIntensity  = dto.NightPrecipitationIntensity;
 
 
             return View(vm);
