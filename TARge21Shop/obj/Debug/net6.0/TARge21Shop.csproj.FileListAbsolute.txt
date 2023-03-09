@@ -66,3 +66,8 @@ C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\obj\Debug\net6.0\TARg
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\obj\Debug\net6.0\ref\TARge21Shop.dll
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\obj\Debug\net6.0\TARge21Shop.pdb
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\obj\Debug\net6.0\TARge21Shop.genruntimeconfig.cache
+C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\bin\Debug\net6.0\Nancy.dll
+C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop\bin\Debug\net6.0\Newtonsoft.Json.dll

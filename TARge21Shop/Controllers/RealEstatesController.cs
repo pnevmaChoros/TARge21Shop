@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TARge21Shop.ApplicationService.Services;
+using TARge21Shop.ApplicationService.Services;   
 using TARge21Shop.Core.Dto;
 using TARge21Shop.Core.ServiceInterface;
 using TARge21Shop.Data;
@@ -294,6 +294,8 @@ namespace TARge21Shop.Controllers
                 Floor = vm.Floor,
                 RoomCounter = vm.RoomCounter,
                 Files = vm.Files,
+                CreatedAt = vm.CreatedAt,
+                ModifiedAt = vm.ModifiedAt,
                 FileToApiDtos = vm.FileToApiViewModels
                     .Select(x => new FileToApiDto
                     {

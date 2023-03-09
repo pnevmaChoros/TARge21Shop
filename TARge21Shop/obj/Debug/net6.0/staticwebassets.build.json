@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RnPzL3fghojWRJ1EnSBHh9KDwtd+Z/2ziIqeR37syqM=",
+  "Hash": "gdYiPvLUm6PwLHLKX+rdNhoqbf8hMeezLGwNPGzkIvU=",
   "Source": "TARge21Shop",
   "BasePath": "_content/TARge21Shop",
   "Mode": "Default",
@@ -1069,23 +1069,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Documents\\Source\\cs\\TARge21Shop\\TARge21Shop\\wwwroot\\multipleFileUpload\\014fd2a4-fcf7-49c4-a2c1-19b7728d39bb_rac vech conc 1.jpg",
-      "SourceId": "TARge21Shop",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\Source\\cs\\TARge21Shop\\TARge21Shop\\wwwroot\\",
-      "BasePath": "_content/TARge21Shop",
-      "RelativePath": "multipleFileUpload/014fd2a4-fcf7-49c4-a2c1-19b7728d39bb_rac vech conc 1.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\multipleFileUpload\\014fd2a4-fcf7-49c4-a2c1-19b7728d39bb_rac vech conc 1.jpg"
     },
     {
       "Identity": "C:\\Users\\Admin\\Documents\\Source\\cs\\TARge21Shop\\TARge21Shop\\wwwroot\\multipleFileUpload\\1d63c9d3-a04c-42ec-b034-44b9875b304b_rac vech conc.jpg",
