@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TARge21Shop.Core.Domain.Spaceship;
+using TARge21Shop.Core.Domain.Car;
 
 namespace TARge21Shop.Data
 {
@@ -12,5 +13,6 @@ namespace TARge21Shop.Data
         }
 
         public DbSet<Spaceship> Spaceships { get; set; }
+        public DbSet<Car> Cars { get; set; }
     }
 }

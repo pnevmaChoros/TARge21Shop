@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace TARge21Shop.Models.Spaceship
+﻿namespace TARge21Shop.Models.Spaceship
 {
     public class SpaceshipIndexViewModel
     {

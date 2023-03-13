@@ -1,6 +1,5 @@
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\TARge21Shop.ApplicationService.deps.json
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\TARge21Shop.ApplicationService.dll
-C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\ref\TARge21Shop.ApplicationService.dll
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\TARge21Shop.ApplicationService.pdb
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\TARge21Shop.Core.dll
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\TARge21Shop.Data.dll
@@ -17,3 +16,4 @@ C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\ob
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\obj\Debug\net6.0\TARge21Shop.ApplicationService.pdb
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\bin\Debug\net6.0\TARge21Shop.ApplicationService.runtimeconfig.json
 C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\obj\Debug\net6.0\TARge21Shop.ApplicationService.genruntimeconfig.cache
+C:\Users\Admin\Documents\Source\cs\TARge21Shop\TARge21Shop.ApplicationService\obj\Debug\net6.0\refint\TARge21Shop.ApplicationService.dll

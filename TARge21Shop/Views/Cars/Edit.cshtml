@@ -1,0 +1,87 @@
+﻿@model TARge21Shop.Models.Car.CarEditViewModel
+
+@if (Model.Id.HasValue)
+{
+		<h1>Update</h1>
+}
+else
+{
+		<h1>Add</h1>	
+}
+
+
+
+<div>
+	<form method="post" enctype="multipart/form-data">
+		<input asp-for="Id"	type="hidden" />
+		<input asp-for="CreatedAt"	type="hidden" />
+
+		<div class="form-group row">
+
+
+			<label asp-for="Mark" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Mark" class="form-control" />
+			</div>
+
+			<label asp-for="Model" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Model" class="form-control" />
+			</div>
+
+			<label asp-for="Type" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Type" class="form-control" />
+			</div>
+
+			<label asp-for="Color" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Color" class="form-control" />
+			</div>
+
+			<label asp-for="Passengers" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Passengers" class="form-control" />
+			</div>
+
+			<label asp-for="Weight" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="Weight" class="form-control" />
+			</div>
+
+			<label asp-for="Manual" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				@*<input type="checkbox"  checke asp-for="Manual" class="form-control" />*@
+				@Html.CheckBoxFor(m => m.Manual)
+			</div>
+
+			<label asp-for="EnginePower" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="EnginePower" class="form-control" />
+			</div>
+
+			<label asp-for="ReleseDate" class="col-sm-2 col-form-label"></label>
+			<div class="col-sm-10">
+				<input asp-for="ReleseDate" class="form-control" />
+			</div>
+		</div>
+
+		<hr />
+
+		@if (Model.Id.HasValue)
+		{
+				<input asp-action="Update" asp-controller="cars" type="submit" class=" btn btn-primary " value="Update" />
+		}
+		else
+		{
+				<input asp-action="add" asp-controller="cars" type="submit" class=" btn btn-primary " value="Add" />
+		}
+
+		@*<a asp-action="edit" asp-controller="car" class="btn btn-primary">Edit</a>*@
+
+		<a asp-action="index" class="btn btn-primary">Back</a>
+
+@*		<a asp-action="delete" class="btn btn-primary">Delete</a>*@
+
+	</form>
+</div>
