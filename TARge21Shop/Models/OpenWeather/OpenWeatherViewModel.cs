@@ -23,7 +23,7 @@
 		public double Speed { get; set; }
 		public int Degree { get; set; }
 
-		//public int All { get; set; }
+		public int All { get; set; }
 
 		public int Dt { get; set; }
 

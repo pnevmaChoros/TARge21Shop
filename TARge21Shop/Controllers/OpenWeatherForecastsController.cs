@@ -68,7 +68,7 @@ namespace TARge21Shop.Controllers
 			vm.Speed = dto.Speed;
 			vm.Degree = dto.Degree;
 
-			//vm.All = dto.All;
+			vm.All = dto.All;
 
 			vm.Dt = dto.Dt;
 

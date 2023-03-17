@@ -6,7 +6,7 @@
 		public List<WeatherDto> Weather { get; set; }
 		public MainDto Main { get; set; }
 		public WindDto Wind { get; set; }
-		//public CloudDto Cloud { get; set; }
+		public CloudsDto Clouds { get; set; }
 		public SysDto Sys { get; set; }
 		
 		public string Base { get; set; }

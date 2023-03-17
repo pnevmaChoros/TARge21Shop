@@ -1,6 +1,6 @@
 ﻿namespace TARge21Shop.Core.Dto.OpenWeatherData
 {
-	public class CloudDto
+	public class CloudsDto
 	{
 		public int All { get; set; }
 	}
