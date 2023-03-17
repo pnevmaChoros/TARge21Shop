@@ -11,36 +11,42 @@
 			<label asp-for="Name" class="col-sm-2 col-form-label"></label>
 
 			@Html.DisplayFor(model => model.Name)
+			
 		</div>
 
 		<div class="form-group row">
 			<label asp-for="Temperature" class="col-sm-2 col-form-label"></label>
 
 			@Html.DisplayFor(model => model.Temperature)
+			℃
 		</div>
 
 		<div class="form-group row">
 			<label asp-for="FeelsLike" class="col-sm-2 col-form-label"></label>
 
 			@Html.DisplayFor(model => model.FeelsLike)
+			℃
 		</div>
 
 		<div class="form-group row">
 			<label asp-for="Humidity" class="col-sm-2 col-form-label"></label>
 
 			@Html.DisplayFor(model => model.Humidity)
+			%
 		</div>
 
 		<div class="form-group row">
 			<label asp-for="Pressure" class="col-sm-2 col-form-label"></label>
 
 			@Html.DisplayFor(model => model.Pressure)
+			Hpa
 		</div>
 
 		<div class="form-group row">
 			<label asp-for="Speed" class="col-sm-2 col-form-label"></label>
 
 			@Html.DisplayFor(model => model.Speed)
+			Km\h
 		</div>
 
 		<div class="form-group row">
@@ -51,5 +57,5 @@
 
 	</dl>
 
-	<a asp-action="index" asp-controller="OpenWeatherForecasts" class="btn btn-success">Back</a>
+	<a asp-action="index" asp-controller="OpenWeatherForecasts" class="btn btn-success">Return</a>
 </div>
