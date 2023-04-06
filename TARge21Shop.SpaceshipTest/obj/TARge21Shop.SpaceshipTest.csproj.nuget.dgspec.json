@@ -131,6 +131,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.11, )"
@@ -321,6 +325,10 @@
               "target": "Package",
               "version": "[2.2.10, )"
             },
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.11, )"
@@ -335,7 +343,7 @@
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.3.2, )"
+              "version": "[17.5.0, )"
             },
             "UmbracoCms.Core": {
               "target": "Package",
@@ -345,9 +353,19 @@
               "target": "Package",
               "version": "[3.1.2, )"
             },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
             "xunit.extensibility.core": {
               "target": "Package",
               "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
             }
           },
           "imports": [

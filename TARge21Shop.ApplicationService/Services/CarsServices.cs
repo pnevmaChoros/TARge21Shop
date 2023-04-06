@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Drawing;
 using TARge21Shop.Core.Domain.Car;
 using TARge21Shop.Core.Dto;
 using TARge21Shop.Core.ServiceInterface;
@@ -9,34 +10,45 @@ namespace TARge21Shop.ApplicationService.Services
 	public class CarsServices : ICarsServices
 	{
 		private readonly TARge21ShopContext _context;
+		private readonly IFilesServices _file;
 
-		public CarsServices(TARge21ShopContext context)
+		public CarsServices
+			(
+				TARge21ShopContext context, 
+				IFilesServices file
+			)
 		{
 			_context = context;
+			_file = file;
 		}
 
 
 		public async Task<Car> Add(CarDto dto)
 		{
-			var domain = new Car()
-			{
-				Id = Guid.NewGuid(),
-				Mark = dto.Mark,
-				Model = dto.Model,
-				Type = dto.Type,
-				Color = dto.Color,
-				Passengers = dto.Passengers,
-				Weight = dto.Weight,
-				Manual = dto.Manual,
-				EnginePower = dto.EnginePower,
-				ReleseDate = DateTime.Now,
-				CreatedAt = DateTime.Now,
-			};
+			Car car = new Car();
+			FileToDatabase file = new FileToDatabase();
 
-			await _context.Cars.AddAsync(domain);
+			car.Id = Guid.NewGuid();
+			car.Mark = dto.Mark;
+			car.Model = dto.Model;
+			car.Type = dto.Type;
+			car.Color = dto.Color;
+			car.Passengers = dto.Passengers;
+			car.Weight = dto.Weight;
+			car.Manual = dto.Manual;
+			car.EnginePower = dto.EnginePower;
+			car.ReleseDate = DateTime.Now;
+			car.CreatedAt = DateTime.Now;
+
+			if(dto.Files != null)
+			{
+				_file.UploadFileToDatabase(dto, car);
+			}
+
+			await _context.Cars.AddAsync(car);
 			await _context.SaveChangesAsync();
 
-			return domain;
+			return car;
 		}
 
 
