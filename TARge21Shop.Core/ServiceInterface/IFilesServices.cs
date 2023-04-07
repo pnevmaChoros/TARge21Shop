@@ -5,7 +5,9 @@ namespace TARge21Shop.Core.ServiceInterface
 {
 	public interface IFilesServices
 	{
-		void UploadFileToDatabase(CarDto dto, CarDto domain);
-		Task<FileToDatabase> RemoveImage(FileToDatabaseDto dto);
+		void UploadPictureToDatabase(CarDto dto, Car domain);
+		Task<PictureToDatabase> RemoveImage(PictureToDatabaseDto dto);
+
+		Task<List<PictureToDatabase>> RemoveImageFromDatabase(PictureToDatabaseDto[] dtos);
 	}
 }

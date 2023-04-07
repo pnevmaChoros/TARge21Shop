@@ -18,7 +18,7 @@ namespace TARge21Shop.Core.Dto
 
 
 		public List<IFormFile> Files { get; set; }
-		public IEnumerable<FileToDatabaseDto> FilesToDatabase { get; set; }
+		public IEnumerable<PictureToDatabaseDto> Image { get; set; } = new List<PictureToDatabaseDto>();
 
 
 		public DateTime ReleseDate { get; set; }

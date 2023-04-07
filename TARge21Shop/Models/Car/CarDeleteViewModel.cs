@@ -11,6 +11,9 @@
 		public int Weight { get; set; }
 		public bool Manual { get; set; }
 		public int EnginePower { get; set; }
+
+		public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
+
 		public DateTime ReleseDate { get; set; }
 		public DateTime CreatedAt { get; set; }
 	}

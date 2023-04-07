@@ -15,5 +15,9 @@ namespace TARge21Shop.Models.Car
 		public int EnginePower { get; set; }
 		public DateTime ReleseDate { get; set; }
 		public DateTime CreatedAt { get; set; }
+
+
+		public List<IFormFile> Files { get; set; }
+		public List<ImageViewModel> Images { get; set; } = new List<ImageViewModel>();
 	}
 }

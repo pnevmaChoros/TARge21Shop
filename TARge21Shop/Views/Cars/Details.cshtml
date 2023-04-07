@@ -77,6 +77,11 @@
 			@Html.DisplayFor(model => model.CreatedAt)
 		</div>
 
+		@foreach (var images in Model.Images)
+		{
+			<partial name="_Images" model="images" />
+		}
+
 	</dl>
 
 	<a asp-action="index" asp-controller="cars" class="btn btn-danger">Back</a>

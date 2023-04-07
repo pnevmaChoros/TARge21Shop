@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TARge21Shop.Data;
 
@@ -11,9 +12,10 @@ using TARge21Shop.Data;
 namespace TARge21Shop.Data.Migrations
 {
     [DbContext(typeof(TARge21ShopContext))]
-    partial class TARge21ShopContextModelSnapshot : ModelSnapshot
+    [Migration("20230407161628_image")]
+    partial class image
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

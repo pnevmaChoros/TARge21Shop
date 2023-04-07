@@ -22,7 +22,7 @@ namespace TARge21Shop.Core.Dto
         public DateTime BuiltDate { get; set; }
 
         public List<IFormFile> Files { get; set; }
-        public IEnumerable<FileToDatabaseDto> Image { get; set; }
+        public IEnumerable<PictureToDatabaseDto> Image { get; set; }
 
 
         // only in database

@@ -1,6 +1,6 @@
-﻿namespace TARge21Shop.Core.Dto
+﻿namespace TARge21Shop.Core.Domain.Car
 {
-	public class FileToDatabaseDto
+	public class PictureToDatabase
 	{
 		public Guid Id { get; set; }
 		public string ImageTitle { get; set; }
